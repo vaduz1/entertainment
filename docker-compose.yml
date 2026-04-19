@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  simhat-ui:
+    build: .
+    container_name: simhat-ui-ent
+    ports:
+      - "8509:8501"
+    volumes:
+      - ./app:/app
+      - /dev:/dev
+    privileged: true
+    restart: unless-stopped
